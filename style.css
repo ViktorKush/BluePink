@@ -1,0 +1,242 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+a, .article a {
+    color: purple;
+    text-decoration: none; /*разрыв и толстая линия */
+}
+
+body {
+    background-color: #373e47;
+}
+
+h4, h3, h2 {
+    line-height: 2;
+}
+
+
+/* flex props */
+.row {
+    display: flex;
+}
+.row.three-columns .column {
+    width: calc(100% / 3);
+}
+
+
+
+.wrapper {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* NAVIGATION */
+.logo img {
+    width: 143px;
+    height: 17px;
+    margin: 13px 840px 15px 17px;
+}
+nav {
+    display: flex;
+    width: 1000px;
+    height: 45px;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    background-image: linear-gradient(to top, #e4e4e4 0%, #f2f2f2 100%);
+    justify-content: space-evenly;
+}
+nav>div:first-child {
+    width: 30%;
+}
+.nav-item {
+    width: 70%;
+    height: 100%;
+    text-shadow: 0 1px 0 #ffffff;
+    color: #143567;
+    font-family: "Arial - Bold MT";
+    justify-content: space-evenly;
+    line-height: 45px;
+    text-align: center;
+}
+
+
+/* CONTENT */
+.content {
+    display: flex;
+    margin-top: 19px;
+    background-color: #57677f;
+    border: 1px solid  #67707d;
+}
+/* LEFT */
+.aside {
+    margin-left: 12px;
+    margin-top: 15px;
+    width: 220px;   
+    background-color: #57677f;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 2px 1px rgba(0, 0, 0, 0.3);
+}
+.aside * {
+    color: #e4e4e4;
+
+}
+.usefull-links {
+    background-color: #373e47;
+}
+
+
+.usefull-links a {
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #57677f;
+}
+
+.usefull-links a li {
+    padding-right: 29px;
+    padding-left: 10px;
+}
+
+.usefull-links a li:before {
+    content: url(img/Layer_10_copy_2.png);
+    padding-right: 7px;
+}
+
+.article {
+    background-color: #373e47;
+    height: 320px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.article a:after {
+    content: '\00BB';
+    padding-left: 5px;
+}
+/* RIGHT */
+.main {
+    flex-grow: 0;
+    flex-basis: 700px;
+    padding: 10px 30px 36px 15px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.75);
+    color: #e4e4e4;
+    font-family: "Arial MT";
+    text-align: justify;
+    font-size: 12px;
+    
+}
+h2, h3 {
+    color: #ffffff;
+    font-family: "Arial - Bold MT";
+}
+img {
+    flex-direction: row;
+}
+
+.column {
+    flex-flow: row nowrap;
+}
+#column1 {
+    type: "disk";
+}
+
+table {
+    border: 1px;
+    width: 100%;
+    border: 1px solid #4c545e;
+    border-collapse: collapse; 
+     /*   border-spacing: 0;*/
+    }
+}
+thead th {
+    text-align: left;
+    background-color: #292e35;
+    color: #ffffff;
+};
+td {
+
+    background-color: #373e47;
+    color: #e4e4e4
+}
+
+
+/*.form-wrap {
+    flex-direction: column;
+}*/
+
+/*.line {
+    width: 223px;
+    height: 29px;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ffffff;
+    background-color: #f0f0f0;
+}*/
+
+#textarea {
+    width: 303px;
+    height: 124px;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ffffff;
+    background-color: #f0f0f0;
+}
+
+
+
+button {
+    width: 90px;
+    height: 35px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #a55f94;
+    background-image: linear-gradient(to top, #a45f93 0%, #b76da5 100%);
+    font-size: 12px;
+    color: #ffffff;
+}
+
+footer {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.75);
+    color: #e4e4e4;
+    font-family: "Arial MT";
+    text-align: center;
+}
